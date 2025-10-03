@@ -32,7 +32,7 @@ RUN \
     make=~4.4 \
     cmake=~3.31 \
     linux-headers=~6.6 \
-    curl-dev=~8.12 && \
+    curl-dev=~8.14 && \
     # Checkout the llama.cpp repository to the wanted version (git tag).
     # A shallow clone (--depth 1) is used to minimize the data transfer.
     git clone -b ${LLAMA_GIT_TAG} --depth 1 https://github.com/ggml-org/llama.cpp . && \
@@ -72,7 +72,7 @@ WORKDIR /opt/llama.cpp
 # Install runtime dependencies: C++, cURL & OpenMP.
 RUN apk add --no-cache \
     libstdc++=~14.2 \
-    libcurl=~8.12 \
+    libcurl=~8.14 \
     libgomp=~14.2
 
 # Copy the compiled llama-server executable from the build stage to the current working directory.
