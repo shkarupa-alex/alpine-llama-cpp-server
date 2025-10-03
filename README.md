@@ -1,12 +1,18 @@
 <div align="center">
+
   <img width="250px" height="auto" src="https://github.com/SamuelTallet/alpine-llama-cpp-server/blob/main/assets/alpine-llama-image-size-rounded-with-bubbles-500px.png?raw=true">
   
   Alpine LLaMA is an ultra-compact Docker image (less than 10 MB), providing a [LLaMA.cpp](https://github.com/ggml-org/llama.cpp) HTTP server for language model inference.
+
 </div>
+
 <div align="center">
-  <img alt="Available on Docker Hub" src="https://img.shields.io/badge/available_on-dockerhub-2496ed?style=flat&logo=docker&color=%232496ed">
-  <img alt="Docker Image Size" src="https://img.shields.io/docker/image-size/samueltallet/alpine-llama-cpp-server?style=flat&color=%236db33f">
+
+  [![Available on Docker Hub](https://img.shields.io/badge/available_on-dockerhub-2496ed?style=flat&logo=docker&color=%232496ed)](https://hub.docker.com/r/samueltallet/alpine-llama-cpp-server)
+  ![Docker Image Size](https://img.shields.io/docker/image-size/samueltallet/alpine-llama-cpp-server?style=flat&color=%236db33f)
+
 </div>
+
 
 ## Use cases
 
@@ -44,7 +50,7 @@ const inferenceClient = new OpenAI({
 
 const productDescription = `UrbanShoes 3.0: These brown and green shoes,
 suitable for casual wear, are made of apple leather and recycled rubber.
-They are priced at only €654.90.`; // 👈😄 This is not a typo.
+They are priced at only €2499.90.`; // 👈😄 This is not a typo.
 
 const productSchema = {
   properties: {
@@ -77,7 +83,7 @@ async function extractProductMeta() {
 }
 
 extractProductMeta();
-// > { "name": "UrbanShoes 3.0", "materials": ["apple leather", "recycled rubber"], "colors": ["brown", "green"], "price": 654.90, "currency": "EUR" }
+// > { "name": "UrbanShoes 3.0", "materials": ["apple leather", "recycled rubber"], "colors": ["brown", "green"], "price": 2499.90, "currency": "EUR" }
 ```
 
 ### With a GUI
