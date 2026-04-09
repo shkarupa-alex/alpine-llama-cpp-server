@@ -144,4 +144,4 @@ Project licensed under MIT. See the [LICENSE](https://github.com/SamuelTallet/al
 
 ## Copyright
 
-© 2025 Samuel Tallet
+© 2026 Samuel Tallet
