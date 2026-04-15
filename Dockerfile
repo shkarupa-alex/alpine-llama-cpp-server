@@ -78,6 +78,19 @@ RUN apk add --no-cache \
 # Copy the compiled llama-server executable from the build stage to the current working directory.
 COPY --from=build /opt/llama-server .
 
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home "/home/llama" \
+    --shell "/sbin/nologin" \
+    --uid "1000" \
+    llama && \
+    mkdir -p /home/llama/.cache/llama.cpp && \
+    chown -R llama:llama /home/llama
+
+USER llama
+
+
 # Server will listen on 8080.
 EXPOSE 8080
 
